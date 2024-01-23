@@ -22,7 +22,7 @@ const Form = ({ getPictures }) => {
 
     axios.post("http://localhost:5000/pictures", data).then(() => {
       dispatch(addPicture(data));
-      dispatch(getPictures());
+      getPictures();
       formRef.current.reset();
     });
   };
